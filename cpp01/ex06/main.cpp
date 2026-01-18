@@ -33,24 +33,7 @@ int	main(int argc, char **argv)
 	}
 	
 	levelIndex = getLevelIndex(argv[1]);
-	
-	switch (levelIndex)
-	{
-		case 0:
-			harl.complain("DEBUG");
-			__attribute__((fallthrough));
-		case 1:
-			harl.complain("INFO");
-			__attribute__((fallthrough));
-		case 2:
-			harl.complain("WARNING");
-			__attribute__((fallthrough));
-		case 3:
-			harl.complain("ERROR");
-			break;
-		default:
-			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
-	}
+	harl.complain(levelIndex);
 	
 	return 0;
 }

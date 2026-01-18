@@ -40,30 +40,21 @@ void	Harl::error(void)
 	std::cout << std::endl;
 }
 
-void	Harl::complain(std::string level)
+void	Harl::complain(int level)
 {
-	void		(Harl::*functions[4])(void);
-	std::string	levels[4];
-	int			i;
 
-	functions[0] = &Harl::debug;
-	functions[1] = &Harl::info;
-	functions[2] = &Harl::warning;
-	functions[3] = &Harl::error;
-	
-	levels[0] = "DEBUG";
-	levels[1] = "INFO";
-	levels[2] = "WARNING";
-	levels[3] = "ERROR";
-	
-	i = 0;
-	while (i < 4)
+	switch (level)
 	{
-		if (levels[i] == level)
-		{
-			(this->*functions[i])();
-			return;
-		}
-		i++;
+		case 0:
+			debug();
+		case 1:
+			info();
+		case 2:
+			warning();
+		case 3:
+			error();
+			break;
+		default:
+			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
 	}
 }
