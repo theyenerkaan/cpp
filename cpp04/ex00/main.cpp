@@ -17,9 +17,7 @@ int main(void) {
 	std::cout << "\n=== TEST 3: Polymorphic Sound (VIRTUAL) ===" << std::endl;
 	std::cout << "Generic animal: ";
 	meta->makeSound();
-	std::cout << "Dog says: ";
 	dog->makeSound();
-	std::cout << "Cat says: ";
 	cat->makeSound();
 	
 	std::cout << "\n=== TEST 4: Cleanup ===" << std::endl;

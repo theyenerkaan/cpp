@@ -6,8 +6,6 @@ int main(void) {
 	std::cout << "=== TEST 1: Cannot Instantiate Abstract Class ===" << std::endl;
 	std::cout << "Trying to create Animal instance..." << std::endl;
 	std::cout << "(This would cause compilation error if uncommented)" << std::endl;
-	// Animal test; // Error: cannot declare variable 'test' to be of abstract type 'Animal'
-	// Animal* ptr = new Animal(); // Error: invalid new-expression of abstract class type 'Animal'
 	
 	std::cout << "\n=== TEST 2: Create Derived Classes ===" << std::endl;
 	const Animal* dog = new Dog();
